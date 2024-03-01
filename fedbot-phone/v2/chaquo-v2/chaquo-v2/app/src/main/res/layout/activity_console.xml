@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chaquo.python.utils.ConsoleActivity">
+
+    <EditText
+        android:id="@+id/etInput"
+        style="@style/Code"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/input_text"
+        android:ems="10"
+        android:hint="Type Here"
+        android:imeOptions="actionDone|flagNoFullscreen"
+        android:singleLine="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <requestFocus />
+    </EditText>
+
+    <ScrollView
+        android:id="@+id/svOutput"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FAFAFA"
+        app:layout_constraintBottom_toTopOf="@id/etInput"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tvOutput"
+            style="@style/ConsoleOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF" />
+    </ScrollView>
+
+
+    <ImageButton
+        android:id="@+id/send_signal_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/send_signal_button_border"
+        android:backgroundTint="#3595A6"
+        android:onClick="sendSignal"
+        android:scaleType="centerInside"
+        android:tint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/train_button"
+        app:layout_constraintEnd_toEndOf="@+id/svOutput"
+        app:layout_constraintStart_toStartOf="@+id/svOutput"
+        app:srcCompat="@drawable/link_24px" />
+
+    <ImageButton
+        android:id="@+id/train_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="16dp"
+        android:adjustViewBounds="true"
+        android:tint="#000000"
+        android:background="@drawable/train_button_border"
+        android:backgroundTint="#3595A6"
+        android:onClick="trainModel"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/upload_button"
+        app:layout_constraintEnd_toEndOf="@+id/svOutput"
+        app:layout_constraintStart_toStartOf="@+id/svOutput"
+        app:srcCompat="@drawable/rule_settings_24px" />
+
+    <ImageButton
+        android:id="@+id/upload_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="16dp"
+        android:adjustViewBounds="false"
+        android:backgroundTint="#3595A6"
+        android:tint="#000000"
+        android:background="@drawable/upload_button_border"
+        android:onClick="sendWeights"
+        app:layout_constraintBottom_toTopOf="@+id/download_button"
+        app:layout_constraintEnd_toEndOf="@+id/svOutput"
+        app:layout_constraintStart_toStartOf="@+id/svOutput"
+        app:srcCompat="@drawable/backup_24px" />
+
+    <ImageButton
+        android:id="@+id/download_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="16dp"
+        android:adjustViewBounds="false"
+        android:background="@drawable/download_button_border"
+        android:backgroundTint="#3595A6"
+        android:onClick="downloadWeights"
+        android:tint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/expand_button"
+        app:layout_constraintEnd_toEndOf="@+id/svOutput"
+        app:layout_constraintStart_toStartOf="@+id/svOutput"
+        app:srcCompat="@drawable/network_intelligence_update_24px" />
+
+    <ImageButton
+        android:id="@+id/expand_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="16dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#013C67"
+        android:tint="#DFE0E1"
+        android:background="@drawable/expand_button_border"
+        android:onClick="expandView"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/etInput"
+        app:layout_constraintEnd_toEndOf="@+id/svOutput"
+        app:layout_constraintStart_toStartOf="@+id/svOutput"
+        app:srcCompat="@drawable/grid_view_24px" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
