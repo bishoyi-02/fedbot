@@ -60,29 +60,29 @@ def get_secagg_model():
 # 	model_aggregation()
 # 	return 'Model aggregation done!\nGlobal model written to persistent storage.'
 
-@app.route('/send_model_clients')
-def send_agg_to_clients():
-	clients = ''
-	with open('clients.txt', 'r') as f:
-		clients = f.read()
-	clients = clients.split('\n')
+# @app.route('/send_model_clients')
+# def send_agg_to_clients():
+# 	clients = ''
+# 	with open('clients.txt', 'r') as f:
+# 		clients = f.read()
+# 	clients = clients.split('\n')
 	
-	for c in clients:
-		if c != '':
-			file = open("agg_model/agg_model.h5", 'rb')
-			data = {'fname':'agg_model.h5'}
-			files = {
-				'json': ('json_data', json.dumps(data), 'application/json'),
-				'model': ('agg_model.h5', file, 'application/octet-stream')
-			}
+# 	for c in clients:
+# 		if c != '':
+# 			file = open("agg_model/agg_model.h5", 'rb')
+# 			data = {'fname':'agg_model.h5'}
+# 			files = {
+# 				'json': ('json_data', json.dumps(data), 'application/json'),
+# 				'model': ('agg_model.h5', file, 'application/octet-stream')
+# 			}
 			
-			print(c+'aggmodel')
-			# req = requests.post(url=c+'aggmodel', files=files)
-			req = requests.post(url=c, files=files)
-			print(req.status_code)
+# 			print(c+'aggmodel')
+# 			# req = requests.post(url=c+'aggmodel', files=files)
+# 			req = requests.post(url=c, files=files)
+# 			print(req.status_code)
 	
-	# print(req.text)
-	return "Aggregated model sent !"
+# 	# print(req.text)
+# 	return "Aggregated model sent !"
 
 @app.route('/download')
 def downloadFile ():

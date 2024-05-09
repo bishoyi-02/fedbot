@@ -1,114 +1,458 @@
 {"intents":
 [
-            {
-             "tag":"greetings",
-             "patterns": ["hello","hey","hi","good day","greetings","what's up?","how is it going"],
-             "responses":["hello","hey!","what can i do for you?"]
-            },
-            {
-             "tag":"goodbye",
-             "patterns": ["cya","see you later","goodbye","have a good day","bye","cao","see ya"],
-             "responses":["have a nice day","goodbye"]
-            },
-            {
-             "tag":"age",
-             "patterns": ["how old","how old are you?","what is your age","how old are you","age?"],
-             "responses":["I get reborn after every compilation","hey!","my owners are averagely 20 years!"]
-            },
-            {
-             "tag":"name",
-             "patterns": ["what is your name","what should i call you","what's your name?","who are you?","can you tell me your name"],
-             "responses":["you can call me Medbot!","i am Medbot!","i am Medbot your medical assistant"]
-            },
-            {
-             "tag":"common cold symptoms",
-             "patterns": ["Runny or stuffy nose",
-             "Sore throat",
-             "Cough",
-             "Congestion",
-             "Slight body aches or a mild headache",
-             "Sneezing",
-             "Low-grade fever",
-             "Generally feeling unwell (malaise)"],
-             "responses":["It seems that you are suffering from common cold"]
-            },
-            {
-             "tag":"fever symptoms",
-             "patterns":["Sweating",
-             "Chills and shivering",
-             "Headache",
-             "Muscle aches",
-             "Loss of appetite",
-             "Irritability",
-             "Dehydration",
-             "General weakness"],
-             "responses":["It seems that you are suffering from fever"]
-            },
-            {
-             "tag":"Diabetes symptoms",
-             "patterns":["increased hunger",
-             "increased thirst",
-             "weight loss",
-             "frequent urination",
-             "blurry vision",
-             "extreme fatigue"],
-             "responses":["It seems that you are suffering from Diabetes"]
-            },
-            {
-             "tag":"Depression symptoms",
-             "patterns":["Hopeless outlook",
-             "Lost interest",
-             "Increased fatigue",
-             "sleep problem",
-             "Anxiety",
-             "change in weight",
-             "Looking at death"],
-             "responses":["It seem that you are suffering from depression"]
-            },
-            {
-             "tag":"Asthma symptoms",
-             "patterns":["coughing",
-             "tightness in the chest",
-             "shortness of breath",
-             "difficulty talking",
-             "panic",
-             "fatigue"],
-             "responses":["It seem that you are suffering from Asthma"]
-            },
-            {
-              "tag":"heart disease",
-              "patterns":["chest pain","short breathing","swelling in legs","swelling in arms","feels like heart attack"],
-              "responses":["Looks like you have got a heart disease. I recommend you to check our Heart Disease Predictor"]
-            },
-            {
-             "tag":"common cold prevention",
-             "patterns":["What medicines can I buy to help me with my common cold?","tell me some prevention method from common cold","What should I eat or drink if i am suffering from common cold?","How can I keep from getting a cold or the flu?"],
-             "responses":["medicines you can consume : Dextromethorphan,Decongestant,Diphenhydramine,Crocin Cold & Flu Max, preventions that you must follow :Wash your hands,Avoid touching your face,Clean frequently used surfaces,Use hand sanitizers,SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup"]
-            },
-            {
-             "tag":"fever prevention",
-             "patterns":["What medicines can I buy to help me with my fever?","tell me some prevention method from fever","What should I eat or drink if i am suffering from fever?","How can I keep from getting a fever?"],
-             "responses":["medicines you can consume : acetaminophen ,ibuprofen,aspirin,Crocin Cold & Flu Max, prevention that you must follow :Wash your hands,Cover your mouth when you cough and your nose when you sneeze,Clean frequently used surfaces,Avoid sharing cups, glasses, and eating utensils with other people.,SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup"]
-            },
-            {
-             "tag":"diabetes prevention",
-             "patterns":["What medicines can I buy to help me with my diabetes?","tell me some prevention method from diabetes","What should I eat or drink if i am suffering from diabetes?","How can I keep from getting diabetes?"],
-             "responses":["medicines you can consume : Insulin ,Amylinomimetic drug,Dipeptidyl peptidase-4 (DPP-4) inhibitor, prevention that you must follow :Cut Sugar and Refined Carbs From Your Diet,Work Out Regularly,Drink Water as Your Primary Beverage,Lose Weight If You’re Overweight or Obese,Quit Smoking, Follow a Very-Low-Carb Diet,Watch Portion Sizes,SUGGESTED FOODS ARE:Leafy greens,Avocados,Eggs"]
-            },
- 
-            {
-             "tag":"depression prevention",
-             "patterns":["What medicines can I buy to help me with my depression?","tell me some prevention method from depression","What should I eat or drink if i am suffering from depression?","How can I keep from getting depression?"],
-             "responses":["medicines you can consume :  brexpiprazole, quetiapine,olanzapine, prevention that you must follow :Exercise regularly,Cut back on social media time,Drink Water as Your Primary Beverage,Build strong relationships,Minimize your daily choices, Follow a Very-Low-Carb Diet,SUGGESTED FOODS ARE:Get Enough Vitamin D,Include Omega-3 Fatty Acids,Beans and legumes"]
-            },
-            {
-             "tag":"asthma prevention",
-             "patterns":["What medicines can I buy to help me with my asthma?","tell me some prevention method from asthma","What should I eat or drink if i am suffering from asthma?","How can I keep from getting asthma?"],
-             "responses":["medicines you can consume : epinephrine,anticholinergic,Proair HFA, prevention that you must follow : Identify Asthma Triggers, Stay Away From Allergens,Avoid Smoke of Any Type,SUGGESTED FOODS ARE:carrots,juice,eggs,broccoli,cantaloupe,milk"]
-            },
-            {
-             "tag":"Consultation",
-             "patterns": ["who should i contact for consultation?","is there any doctor available?","can you give me some suggestions for doctor consultations?","can you set up a meeting with a doctor for consultation?","is there any doctor available for consultation"],
-             "responses":["You can contact various doctors here for any kind of consultation: 1. https://www.1mg.com/online-doctor-consultation, 2. https://www.tatahealth.com/online-doctor-consultation/general-physician, 3. https://www.doconline.com/, or you can pay a visit to your local area doctor or family doctor."]
-            }
+  {
+    "tag": "greetings",
+    "patterns": ["hello", "hey", "hi", "good day", "greetings", "what's up?"],
+    "responses": ["hello", "hey!", "what can i do for you?"]
+  },
+  {
+    "tag": "goodbye",
+    "patterns": ["cya", "goodbye", "good day", "bye", "cao", "see ya"],
+    "responses": ["have a nice day", "goodbye"]
+  },
+  {
+    "tag": "common cold symptoms",
+    "patterns": ["Runny nose", "Sore throat", "Cough", "Congestion", "body aches", "mild headache", "Sneezing", "fever", "unwell", "malaise"],
+    "responses": ["It seems that you are suffering from common cold"]
+  },
+  {
+    "tag": "fever symptoms",
+    "patterns": ["Sweating", "Chills", "shivering", "Headache", "Muscle aches", "Loss of appetite", "Irritability", "Dehydration", "General weakness" ],
+    "responses": ["It seems that you are suffering from fever"]
+  },
+  {
+    "tag": "Diabetes symptoms",
+    "patterns": ["hunger", "increased hunger", "increased thirst", "weight loss", "frequent urination", "blurry vision", "extreme fatigue" ],
+    "responses": ["It seems that you are suffering from Diabetes"]
+  },
+  {
+    "tag": "Depression symptoms",
+    "patterns": ["Hopeless outlook", "Lost interest", "Increased fatigue", "sleep problem", "Anxiety", "change in weight", "Looking at death"],
+    "responses": ["It seem that you are suffering from depression"]
+  },
+  {
+    "tag": "Asthma symptoms",
+    "patterns": ["coughing", "tight chest", "shortness breath", "difficulty talking", "panic", "fatigue"],
+    "responses": ["It seem that you are suffering from Asthma"]
+  },
+  {
+    "tag": "common cold prevention",
+    "patterns": ["medicines common cold",  "cold", "flu"],
+    "responses": ["medicines you can consume : Dextromethorphan,Decongestant,Diphenhydramine,Crocin Cold & Flu Max, preventions that you must follow :Wash your hands,Avoid touching your face,Clean frequently used surfaces,Use hand sanitizers,SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup"]
+  },
+  {
+    "tag": "fever prevention",
+    "patterns": ["medicines fever",  "fever", "high temperature", "body heat", "temperature"],
+    "responses": ["medicines you can consume : acetaminophen ,ibuprofen,aspirin,Crocin Cold & Flu Max, prevention that you must follow :Wash your hands,Cover your mouth when you cough and your nose when you sneeze,Clean frequently used surfaces,Avoid sharing cups, glasses, and eating utensils with other people.,SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup"]
+  },
+  {
+    "tag": "diabetes prevention",
+    "patterns": [ "medicines diabetes", "prevention diabetes", "diabetes"],
+    "responses": ["medicines you can consume : Insulin ,Amylinomimetic drug,Dipeptidyl peptidase-4 (DPP-4) inhibitor, prevention that you must follow :Cut Sugar and Refined Carbs From Your Diet,Work Out Regularly,Drink Water as Your Primary Beverage,Lose Weight If You’re Overweight or Obese,Quit Smoking, Follow a Very-Low-Carb Diet,Watch Portion Sizes,SUGGESTED FOODS ARE:Leafy greens,Avocados,Eggs"]
+  },
+  {
+    "tag": "depression prevention",
+    "patterns": ["medicines depression", "depression"],
+    "responses": ["medicines you can consume :  brexpiprazole, quetiapine,olanzapine, prevention that you must follow :Exercise regularly,Cut back on social media time,Drink Water as Your Primary Beverage,Build strong relationships,Minimize your daily choices, Follow a Very-Low-Carb Diet,SUGGESTED FOODS ARE:Get Enough Vitamin D,Include Omega-3 Fatty Acids,Beans and legumes"]
+  },
+  {
+    "tag": "asthma prevention",
+    "patterns": ["medicines for asthma", " asthma"],
+    "responses": ["medicines you can consume : epinephrine,anticholinergic,Proair HFA, prevention that you must follow : Identify Asthma Triggers, Stay Away From Allergens,Avoid Smoke of Any Type,SUGGESTED FOODS ARE:carrots,juice,eggs,broccoli,cantaloupe,milk"]
+  },
+  {
+    "tag": "Consultation",
+    "patterns": ["consultation", "doctor", "doctor consultations", "meet doctor"],
+    "responses": ["You can contact various doctors here for any kind of consultation: 1. https://www.1mg.com/online-doctor-consultation, 2. https://www.tatahealth.com/online-doctor-consultation/general-physician, 3. https://www.doconline.com/, or you can pay a visit to your local area doctor or family doctor."]
+  },
+  {
+    "tag": "symptoms-check",
+    "patterns": ["feeling unwell", "symptoms COVID-19", "flu"],
+    "responses": ["Common symptoms include fever, cough, and difficulty breathing. Have you experienced any of these?", "Symptoms often include fever, chills, cough, sore throat, runny or stuffy nose, muscle or body aches, headache, and fatigue. Do any of these sound familiar?"]
+  },
+  {
+    "tag": "first-aid",
+    "patterns": ["minor burn", "first aid tips"],
+    "responses": ["To treat minor injury rest, ice, compress, and elevate the injured area (R.I.C.E.). Avoid putting weight on it and seek medical attention if severe.", "For a nosebleed, sit upright, pinch your nostrils shut for 10 minutes, apply ice to the bridge of your nose, and avoid blowing or picking your nose."]
+  },
+  {
+    "tag": "mental-health-support",
+    "patterns": ["anxious", "panic attacks", "stress"],
+    "responses": ["Practice deep breathing exercises and try to focus on the present moment to alleviate anxiety.", "During a panic attack, try grounding techniques like naming objects around you or focusing on your breathing. Consider seeking therapy for long-term support.", "You can find stress management resources such as meditation apps, online therapy platforms, and self-help books. It's important to prioritize self-care and reach out for support when needed."]
+  },
+  {
+    "tag": "emergency-contacts",
+    "patterns": ["emergency", "hotlines", "contacts"],
+    "responses": ["In case of a medical emergency, dial your local emergency number immediately (e.g., 911 in the US, 999 in the UK).", "You can also save the numbers for poison control centers, suicide hotlines, and local hospitals in your emergency contacts.", "It's important to have a list of emergency contacts, including family members, friends, and healthcare providers, readily available in case of an emergency."]
+  },
+  {
+    "tag": "healthy-lifestyle",
+    "patterns": ["healthy diet", "exercise", "stress relief"],
+    "responses": ["Aim for a balanced diet rich in fruits, vegetables, whole grains, lean proteins, and healthy fats. Limit processed foods, sugary drinks, and excessive salt.", "Adults should aim for at least 150 minutes of moderate-intensity aerobic activity or 75 minutes of vigorous-intensity activity per week, along with muscle-strengthening exercises on two or more days.", "Stress-relief techniques include deep breathing, meditation, yoga, progressive muscle relaxation, and spending time in nature. Find what works best for you and incorporate it into your daily routine."]
+  },
+  {
+    "tag": "medication-adherence",
+    "patterns": ["forget medication", "take pills","missing medication"],
+    "responses": ["Try setting reminders on your phone or using pill organizers to help you remember your medication schedule. You can also ask family members or caregivers for support.", "Missing doses of medication can affect its effectiveness and may lead to worsening symptoms or complications. It's important to follow your prescribed regimen consistently.", "If you miss a dose of your medication, take it as soon as you remember. However, if it's almost time for your next dose, skip the missed dose and resume your regular schedule. Consult your doctor if you have concerns."]
+  },
+  {
+    "tag": "pregnancy-queries",
+    "patterns": ["pregnancy","pregnant"],
+    "responses": ["During pregnancy, aim for a balanced diet rich in fruits, vegetables, whole grains, lean proteins, and calcium-rich foods like dairy products. Avoid raw or undercooked foods, unpasteurized dairy, and excess caffeine.", "Regular exercise is generally safe during pregnancy and can have numerous benefits, such as improving mood, reducing discomfort, and promoting better sleep. However, consult your healthcare provider before starting any new exercise routine."]
+  },
+  {
+    "tag": "allergic-reactions",
+    "patterns": ["allergic reaction", "manage allergies", "allergy"],
+    "responses": ["If you suspect an allergic reaction, seek medical help immediately, especially if you experience difficulty breathing, swelling of the face or throat, or severe itching.", "Common symptoms of an allergic reaction include hives, itching, rash, swelling, wheezing, and difficulty breathing. Avoid triggers, carry epinephrine if prescribed, and consult an allergist for personalized management.", "To manage allergies, identify and avoid triggers, take prescribed medications (such as antihistamines or nasal sprays), use allergy-proof bedding, and consider allergy shots (immunotherapy) for long-term relief."]
+  },
+  {
+    "tag": "skin-care-tips",
+    "patterns": ["skin health","skincare routine", "acne"],
+    "responses": ["Maintain good skin health by cleansing your face daily, using sunscreen, moisturizing, eating a balanced diet, staying hydrated, and getting enough sleep.", "A basic skincare routine involves cleansing, toning, moisturizing, and applying sunscreen. Choose products suitable for your skin type and concerns, and avoid harsh ingredients.", "To treat acne, wash your face twice daily with a gentle cleanser, use non-comedogenic (non-pore-clogging) skincare products, avoid picking or squeezing pimples, and consider topical or oral medications prescribed by a dermatologist."]
+  },
+  {
+    "tag": "sexual-health",
+    "patterns": ["safe sex", "sexually transmitted infections", "sexually transmitted diseases","STI", "std"],
+    "responses": ["Practice safe sex by using condoms correctly and consistently, limiting sexual partners, getting vaccinated against HPV and hepatitis B, and communicating openly with your partner about STI testing and status.", "Common symptoms of STIs include unusual discharge, genital itching or rash, pain or burning during urination, and sores or blisters in the genital area. If you're experiencing symptoms, get tested promptly.", "You can get tested for STIs at your healthcare provider's office, local clinics, Planned Parenthood centers, or through at-home testing kits. Testing is confidential, and treatment is available for most STIs."]
+  },
+  {
+    "tag": "medication-costs",
+    "patterns": ["medications expensive", "money medications", "medication costs"],
+    "responses": ["Several factors contribute to the high cost of prescription medications, including research and development costs, marketing expenses, and monopolies held by pharmaceutical companies. Generic alternatives and discounts may offer more affordable options.", "To save money on prescription medications, ask your doctor about generic alternatives, compare prices at different pharmacies, use prescription discount cards or coupons, and inquire about patient assistance programs offered by drug manufacturers.", "Many pharmaceutical companies offer patient assistance programs, discount cards, or coupons to help offset the cost of medications for eligible individuals. Additionally, government programs like Medicare, Medicaid, and the Affordable Care Act may provide coverage or subsidies for prescription drugs."]
+  },
+  {
+    "tag": "sleep-disorders",
+    "patterns": ["trouble sleeping", "insomnia", "sleep"],
+    "responses": ["If you're experiencing persistent sleep problems, consult a healthcare provider to rule out underlying medical conditions and receive personalized treatment recommendations.", "Common causes of insomnia include stress, anxiety, depression, poor sleep hygiene, caffeine or alcohol consumption, and certain medications. Addressing underlying issues and practicing good sleep habits can improve sleep quality.", "To promote better sleep, establish a regular sleep schedule, create a comfortable sleep environment, limit screen time before bed, avoid caffeine and heavy meals close to bedtime, and practice relaxation techniques like deep breathing or meditation."]
+  },
+  {
+    "tag": "nutrition-tips",
+    "patterns": ["healthy snack", "balanced meal", "improve diet", "diet"],
+    "responses": ["Healthy snack options include fresh fruits, nuts, Greek yogurt, hummus with veggies, and whole-grain crackers with cheese. Opt for nutrient-dense foods to keep you satisfied between meals.", "A balanced meal plan should include a variety of fruits, vegetables, whole grains, lean proteins, and healthy fats. Aim for colorful plates and portion control to meet your nutritional needs.", "To improve your diet, focus on incorporating more plant-based foods, limiting processed foods and added sugars, staying hydrated, and practicing mindful eating. Consulting a registered dietitian can provide personalized recommendations."]
+  },
+  {
+    "tag": "chronic-pain-management",
+    "patterns": ["chronic pain", "pain treatment", "pain relief", "pain"],
+    "responses": ["Chronic pain management may involve a multidisciplinary approach, including medication, physical therapy, exercise, acupuncture, massage therapy, cognitive-behavioral therapy, and relaxation techniques.", "Non-pharmacological treatments for chronic pain include physical therapy, chiropractic care, acupuncture, yoga, mindfulness meditation, biofeedback, and transcutaneous electrical nerve stimulation (TENS).", "Pain-relief techniques such as deep breathing, progressive muscle relaxation, guided imagery, heat therapy, cold therapy, and distraction techniques can help alleviate chronic pain. Experiment with different methods to find what works best for you."]
+  },
+  {
+    "tag": "substance-abuse-support",
+    "patterns": ["substance abuse","addiction", "support groups"],
+    "responses": ["If you're struggling with substance abuse, seek professional help from a healthcare provider, addiction specialist, or counselor. Treatment options may include therapy, support groups, detoxification, and rehabilitation programs.", "Supporting a loved one with addiction involves offering non-judgmental support, encouraging them to seek help, setting boundaries, and educating yourself about addiction and available resources.", "Support groups like Alcoholics Anonymous (AA), Narcotics Anonymous (NA), SMART Recovery, and family support groups provide a supportive environment for individuals affected by substance abuse. Consider attending meetings for guidance and encouragement."]
+  },
+  {
+    "tag": "elder-care",
+    "patterns": ["elderly family", "caregivers old people", "senior citizen"],
+    "responses": ["Caring for an elderly family member at home involves ensuring their safety, providing assistance with daily activities, managing medications, scheduling regular medical check-ups, and addressing their emotional and social needs.", "Caregivers of older adults can access support through community resources, caregiver support groups, respite care services, and online forums. Taking breaks, seeking assistance, and prioritizing self-care are essential for caregiver well-being."]
+  },
+  {
+    "tag": "pet-care-tips",
+    "patterns": ["pet healthy", "pet injured", "pet first aid kit"],
+    "responses": ["To keep your pet healthy, provide balanced nutrition, regular exercise, preventive veterinary care (including vaccinations and parasite control), mental stimulation, and plenty of love and attention.", "If your pet is injured or sick, contact a veterinarian for guidance. Be prepared to provide information about your pet's symptoms, medical history, and any recent changes in behavior or environment.", "A pet first aid kit should include items such as bandages, gauze pads, adhesive tape, antiseptic wipes, tweezers, scissors, a digital thermometer, a muzzle (for dogs), and contact information for emergency veterinary care. Keep it accessible and regularly check and restock supplies."]
+  },
+  {
+    "tag": "stress-management-tips",
+    "patterns": ["stress", "relaxation", "stress relief","stress management"],
+    "responses": ["To cope with stress, practice relaxation techniques such as deep breathing, meditation, progressive muscle relaxation, yoga, tai chi, or visualization exercises.", "Other stress management strategies include physical activity, spending time outdoors, engaging in hobbies, connecting with loved ones, setting realistic goals, and maintaining a healthy work-life balance.", "Finding healthy ways to cope with stress is essential for overall well-being. Experiment with different techniques to discover what works best for you, and seek professional help if stress becomes overwhelming."]
+  },
+  {
+    "tag": "healthy-heart-tips",
+    "patterns": ["heart health", "heart disease", "heart"],
+    "responses": ["To maintain heart health, adopt a balanced diet low in saturated fats, cholesterol, and sodium, and high in fruits, vegetables, whole grains, lean proteins, and healthy fats.", "Manage risk factors for heart disease by maintaining a healthy weight, staying physically active, quitting smoking, managing stress, controlling blood pressure and cholesterol levels, and limiting alcohol consumption."]
+  },
+  {
+    "tag": "digestive-health-tips",
+    "patterns": ["digestion", "digestive problems", "foods digestion"],
+    "responses": ["To improve digestion, eat a diet rich in fiber from fruits, vegetables, whole grains, and legumes, stay hydrated, chew food thoroughly, and avoid overeating, processed foods, and excessive fat.", "Common digestive problems include indigestion, heartburn, constipation, diarrhea, gas, bloating, and irritable bowel syndrome (IBS). Consult a healthcare provider for personalized advice and treatment.", "Foods that support digestive health include yogurt with probiotics, kefir, sauerkraut, kimchi, fiber-rich fruits and vegetables, whole grains, and ginger. Experiment with adding these foods to your diet to promote gut health."]
+  },
+  {
+    "tag": "vision-care-tips",
+    "patterns": ["care eyes", "eye problems", "eye exercises", "eyes"],
+    "responses": ["To take care of your eyes, wear sunglasses with UV protection, eat a diet rich in antioxidants and omega-3 fatty acids, maintain a healthy weight, avoid smoking, and take regular breaks from screens.", "Signs of eye problems may include blurry vision, double vision, difficulty seeing at night, eye pain or discomfort, redness, itching, burning, or changes in eye appearance. Schedule an eye exam if you experience any of these symptoms."]
+  },
+  {
+    "tag": "dental-care-tips",
+    "patterns": ["oral hygiene", "dental problems", "dental care"],
+    "responses": ["Maintain good oral hygiene by brushing your teeth twice daily with fluoride toothpaste, flossing between teeth once a day, using mouthwash, and visiting the dentist regularly for check-ups and cleanings.", "Signs of dental problems may include toothache, sensitivity to hot or cold, swollen or bleeding gums, bad breath, loose teeth, or changes in bite. Prompt dental care can prevent complications."]
+  },
+  {
+    "tag": "bone-health-tips",
+    "patterns": ["bone health", "osteoporosis", "strong bones", "fracture"],
+    "responses": ["To improve bone health, consume an adequate amount of calcium and vitamin D through diet and supplements if necessary, engage in weight-bearing and muscle-strengthening exercises, avoid smoking and excessive alcohol consumption, and prevent falls.", "Risk factors for osteoporosis include aging, being female, low body weight, family history of the condition, certain medications, hormonal factors, and lifestyle choices. Assess your risk and take preventive measures.", "Exercises for stronger bones include walking, jogging, dancing, stair climbing, weightlifting, yoga, and tai chi. Aim for at least 30 minutes of weight-bearing exercise most days of the week to promote bone density and strength."]
+  },
+  {
+    "tag": "immune-system-boosters",
+    "patterns": ["immune system", "immunity foods"],
+    "responses": ["To boost your immune system, maintain a balanced diet rich in fruits, vegetables, whole grains, lean proteins, healthy fats, and probiotics, stay hydrated, get enough sleep, exercise regularly, manage stress, and practice good hygiene.", "Natural remedies for colds and flu may include consuming vitamin C-rich foods or supplements, zinc, echinacea, elderberry, honey, garlic, ginger, and herbal teas. However, consult a healthcare provider before trying any new remedy.", "Immune-boosting foods include citrus fruits, berries, kiwi, spinach, broccoli, red bell peppers, garlic, ginger, turmeric, almonds, yogurt, and green tea. Incorporate these foods into your diet to support your immune system."]
+  },
+  {
+    "tag": "cancer-prevention-tips",
+    "patterns": ["risk cancer", "signs cancer", "cancer test"],
+    "responses": ["To reduce your risk of cancer, maintain a healthy weight, eat a balanced diet high in fruits, vegetables, and whole grains, limit processed and red meats, avoid tobacco and excessive alcohol, protect your skin from UV radiation, and stay physically active.", "Warning signs of cancer may include changes in bowel or bladder habits, a sore that does not heal, unusual bleeding or discharge, thickening or lumps in the breast or elsewhere, indigestion or difficulty swallowing, and persistent cough or hoarseness.", "Regular cancer screening tests such as mammograms, Pap tests, colonoscopies, prostate exams, and skin checks can help detect cancer early when treatment is most effective. Follow your healthcare provider's recommendations for screening based on your age, gender, and risk factors."]
+  },
+  {
+    "tag": "hearing-health-tips",
+    "patterns": ["hearing", "hearing loss", "hearing aids", "ear pain"],
+    "responses": ["To protect your hearing, avoid exposure to loud noises or use ear protection (earplugs or earmuffs) in noisy environments, take breaks from loud activities, keep headphone volume at a safe level, and limit exposure to ototoxic substances.", "Signs of hearing loss may include difficulty understanding speech, asking others to repeat themselves, turning up the volume on electronic devices, avoiding social situations, ringing or buzzing in the ears (tinnitus), and ear pain or pressure.", "If you experience hearing loss, consult an audiologist for a hearing evaluation. Hearing aids and assistive devices may improve your ability to communicate and enhance your quality of life."]
+  },
+  {
+    "tag": "postural-health-tips",
+    "patterns": ["good posture", "poor posture", "posture"],
+    "responses": ["To maintain good posture, sit and stand tall with your shoulders back, keep your spine aligned, avoid slouching or rounding your shoulders, distribute weight evenly on both feet, and use ergonomic furniture and accessories.", "Poor posture may lead to back and neck pain, headaches, muscle fatigue, joint stiffness, reduced flexibility, breathing difficulties, digestive problems, and decreased self-confidence. Practice good posture habits to prevent these issues.", "Exercises for better posture include shoulder blade squeezes, chin tucks, chest stretches, cat-cow stretches, plank exercises, and yoga poses like mountain pose and cobra pose. Strengthening and stretching the muscles that support good posture can help improve alignment and reduce strain."]
+  },
+  {
+    "tag": "mental-health-support",
+    "patterns": ["anxious", "mental health", " mental health support"],
+    "responses": ["If you're feeling anxious or depressed, it's important to reach out for support. Consider talking to a therapist, counselor, or trusted friend or family member. You can also call a mental health helpline for immediate assistance.", "To improve your mental health, prioritize self-care activities such as getting enough sleep, eating a balanced diet, exercising regularly, practicing relaxation techniques, setting boundaries, and seeking professional help when needed.", "Resources for mental health support include therapy apps, online support groups, crisis hotlines, community mental health centers, and websites offering information and self-help resources. Don't hesitate to reach out for help if you're struggling."]
+  },
+  {
+    "tag": "medication-side-effects",
+    "patterns": [ "side effects medication", "side effects", "medication side effects"],
+    "responses": [ "If you're experiencing side effects from your medication, it's important to consult your healthcare provider. They can assess the severity of the side effects and recommend adjustments to your treatment plan if necessary.", "Side effects of medications vary depending on the drug and individual factors. Your healthcare provider can provide information about the potential side effects of specific medications and strategies to minimize them.", "Ways to manage medication side effects may include adjusting the dosage, switching to a different medication, taking the medication with food, staying hydrated, using supportive therapies, and monitoring symptoms closely. Always follow your healthcare provider's recommendations."]
+  },
+  {
+    "tag": "infant-care-tips",
+    "patterns": ["newborn care", "newborn care practices", "new parents"],
+    "responses": ["Taking care of a newborn involves feeding them on demand, changing diapers frequently, ensuring they get enough sleep, providing skin-to-skin contact, and scheduling regular check-ups with a pediatrician.", "Common newborn care practices include bathing your baby, keeping their umbilical cord stump clean and dry until it falls off, dressing them appropriately for the weather, and creating a safe sleep environment.", "Resources for new parents include parenting books, online forums, parenting classes, support groups, and websites offering information on newborn care, breastfeeding, sleep training, and child development."]
+  },
+  {
+    "tag": "senior-care-tips",
+    "patterns": ["elderly care", "concerns seniors", "eldercare"],
+    "responses": ["Caring for an elderly loved one involves providing assistance with activities of daily living, ensuring their safety at home, scheduling regular medical check-ups, managing medications, and addressing their emotional and social needs.", "Common health concerns in seniors include arthritis, heart disease, dementia, falls, osteoporosis, diabetes, and depression. Regular medical care and preventive measures can help manage these conditions.", "Resources for eldercare include caregiver support groups, respite care services, home healthcare agencies, senior centers, and government programs offering assistance with healthcare, housing, and financial needs."]
+  },
+  {
+    "tag": "travel-health-tips",
+    "patterns": ["health traveling", "travel vaccination", "travel health insurance"],
+    "responses": [ "To stay healthy while traveling, practice good hygiene, stay hydrated, get enough rest, eat safely prepared food, protect yourself from insect bites and sun exposure, and take precautions to prevent motion sickness and altitude sickness.", "Vaccinations required for travel depend on your destination, activities planned, and personal health history. Consult a travel health clinic or healthcare provider well in advance of your trip to receive personalized recommendations."]
+  },
+  {
+    "tag": "managing-chronic-illness",
+    "patterns": ["chronic illness", "chronic conditions"],
+    "responses": [ "Managing a chronic illness involves working closely with healthcare providers to develop a personalized treatment plan, taking medications as prescribed, adopting healthy lifestyle habits, seeking emotional support, and staying informed about your condition.", "Coping strategies for chronic conditions may include practicing self-care activities, setting realistic goals, maintaining a positive outlook, connecting with others facing similar challenges, and seeking professional counseling or therapy when needed."]
+  },
+  {
+    "tag": "reproductive-health",
+    "patterns": [ "reproductive health", "reproductive health concerns", "contraceptives", "family planning"],
+    "responses": ["Maintaining reproductive health involves practicing safe sex, getting regular check-ups with a gynecologist or reproductive health provider, staying up-to-date on vaccinations, and addressing any reproductive health concerns promptly.", "Common reproductive health concerns include sexually transmitted infections (STIs), menstrual irregularities, infertility, polycystic ovary syndrome (PCOS), endometriosis, and menopause-related issues. Seek medical advice if you experience symptoms or have questions about your reproductive health.", "Contraceptives and family planning methods vary in effectiveness, convenience, and side effects. Options include hormonal methods (pills, patches, injections), barrier methods (condoms, diaphragms), intrauterine devices (IUDs), implants, and natural family planning techniques. Consult a healthcare provider to find the best fit for your needs and preferences."]
+  },
+  {
+    "tag": "childrens-health",
+    "patterns": ["child health", "childhood illness"],
+    "responses": ["Keeping your child healthy involves ensuring they receive routine vaccinations, eat a balanced diet, get enough sleep, engage in regular physical activity, practice good hygiene, and receive regular check-ups with a pediatrician.", "Common childhood illnesses include colds, flu, ear infections, strep throat, stomach bugs, and chickenpox. Treatments may include rest, fluids, over-the-counter medications, prescription medications, and supportive care. Consult a pediatrician for guidance."]
+  },
+  {
+    "tag": "alternative-medicine",
+    "patterns": ["alternative practices", "alternative treatments", "reputable alternative medicine"],
+    "responses": ["Alternative medicine practices encompass a wide range of therapies and techniques that are used in conjunction with or as alternatives to conventional medical treatments. These may include acupuncture, chiropractic care, herbal medicine, massage therapy, naturopathy, and traditional Chinese medicine.", "Alternative treatments for common health conditions may vary depending on individual preferences, beliefs, and health needs. It's important to discuss any alternative therapies with a healthcare provider to ensure they are safe and appropriate for your specific situation.", "To find a reputable alternative medicine practitioner, seek recommendations from trusted sources such as healthcare providers, friends, family, or professional organizations. Research the practitioner's credentials, experience, and approach to treatment before scheduling an appointment."]
+  },
+  {
+    "tag": "skin-care-tips",
+    "patterns": ["care skin", "skin conditions", "skin treatment"],
+    "responses": ["To take care of your skin, cleanse it gently with a mild cleanser, moisturize daily, protect it from sun damage by using sunscreen, avoid excessive sun exposure, eat a healthy diet, stay hydrated, and get enough sleep.", "Common skin conditions include acne, eczema, psoriasis, rosacea, dermatitis, and fungal infections. Treatments may include topical medications, oral medications, lifestyle modifications, and skincare routines tailored to the specific condition."]
+  },
+  {
+    "tag": "aging-gracefully",
+    "patterns": ["age gracefully", "anti aging tips?", "skincare routines"],
+    "responses": ["Aging gracefully involves taking care of your overall health, staying physically active, eating a balanced diet, managing stress, getting enough sleep, avoiding tobacco and excessive alcohol, and practicing self-care.", "Anti-aging tips include protecting your skin from sun damage, staying hydrated, eating a diet rich in antioxidants and omega-3 fatty acids, using skincare products with retinoids or peptides, and considering minimally invasive cosmetic procedures if desired.", "Skincare routines for mature skin should focus on hydration, protection, and targeting specific concerns such as wrinkles, fine lines, and age spots. Consider using gentle cleansers, hydrating serums, rich moisturizers, and broad-spectrum sunscreen."]
+  },
+  {
+    "tag": "eye-care-tips",
+    "patterns": ["healthy eyes", "eye problems", "eye treatment", "eye exercises"],
+    "responses": ["To maintain healthy eyes, get regular eye exams, eat a balanced diet rich in vitamins and minerals, protect your eyes from UV radiation and blue light, avoid smoking, and practice good hygiene habits.", "Common eye problems include refractive errors (such as myopia and hyperopia), dry eye syndrome, cataracts, glaucoma, macular degeneration, and diabetic retinopathy. Treatments may include corrective lenses, medications, surgery, or lifestyle modifications.", "While eye exercises may not improve vision, they can help relieve eye strain and improve eye muscle coordination. Consider practicing techniques such as eye rolling, focusing on distant objects, palming, and near-far focusing."]
+  },
+  {
+    "tag": "sleep-health-tips",
+    "patterns": [ "sleep quality", "better sleep?", "bedtime"],
+    "responses": ["To improve sleep quality, establish a consistent sleep schedule, create a relaxing bedtime routine, optimize your sleep environment (quiet, dark, and comfortable), limit screen time before bed, and avoid caffeine and heavy meals close to bedtime.", "Tips for better sleep include getting regular exercise, managing stress through relaxation techniques, avoiding naps late in the day, limiting alcohol and nicotine, and ensuring your mattress and pillows provide adequate support and comfort.", "A bedtime routine can help signal to your body that it's time to wind down and prepare for sleep. Consider activities such as reading, taking a warm bath, practicing gentle yoga or stretching, or listening to calming music or white noise."]
+  },
+  {
+    "tag": "workplace-wellness",
+    "patterns": ["healthy at work", "workplace wellness", "ergonomic practices"],
+    "responses": ["To stay healthy at work, take regular breaks to stretch and move, stay hydrated, eat nutritious snacks, practice good posture, manage stress through deep breathing or meditation, and prioritize work-life balance.", "Workplace wellness tips include promoting physical activity (such as walking meetings or standing desks), fostering social connections with colleagues, offering healthy food options, providing access to mental health resources, and encouraging open communication about wellness.", "Ergonomic practices can help reduce strain and discomfort at work. Ensure your workstation is set up correctly with proper chair height, keyboard and mouse placement, monitor position, and lighting. Take micro-breaks to rest your eyes and stretch your muscles."]
+  },
+  {
+    "tag": "environmental-health",
+    "patterns": ["environmental health", "sustainable living tips"],
+    "responses": ["To promote environmental health, reduce waste by recycling and composting, conserve water and energy, minimize air pollution by reducing car use and supporting clean energy initiatives, and choose environmentally friendly products and packaging.", "Eco-friendly practices include using reusable items (such as bags, bottles, and containers), choosing products with minimal packaging, supporting local and organic food options, reducing meat consumption, and participating in community clean-up efforts.", "Sustainable living tips include reducing consumption, repurposing or repairing items instead of discarding them, supporting ethical and sustainable brands, gardening or growing your own food, and advocating for environmental policies and initiatives."]
+  },
+  {
+    "tag": "addiction-recovery-support",
+    "patterns": ["addiction recovery","addiction support groups", "drug addict", "addiction", "addict", "drugs"],
+    "responses": ["To support someone in addiction recovery, offer non-judgmental encouragement, listen actively, educate yourself about addiction and recovery, provide practical assistance, and help them access professional treatment and support services.", "Resources for addiction recovery include addiction treatment centers, counseling services, support groups (such as Alcoholics Anonymous or Narcotics Anonymous), online forums, helplines, and peer support programs.", "Addiction support groups offer a sense of community, understanding, and accountability for individuals in recovery. Encourage your loved one to attend meetings regularly and participate in group discussions to share experiences and receive support."]
+  },
+  {
+    "tag": "Hypertension (High Blood Pressure)",
+    "patterns": ["hypertension", "blood pressure", "manage hypertension", "high bp", "low bp"],
+    "responses": ["Symptoms of hypertension may include headaches, shortness of breath, dizziness, chest pain, and visual changes. However, hypertension is often asymptomatic, so it's important to monitor your blood pressure regularly.", "To lower blood pressure naturally, consider reducing sodium intake, increasing potassium-rich foods (such as fruits and vegetables), maintaining a healthy weight, exercising regularly, limiting alcohol consumption, quitting smoking, and managing stress.", "Lifestyle changes for managing hypertension include following a heart-healthy diet (such as the DASH diet), exercising for at least 30 minutes most days of the week, quitting smoking, limiting caffeine intake, and practicing relaxation techniques."]
+  },
+  {
+    "tag": "Diabetes Mellitus (Type 2 Diabetes)",
+    "patterns": ["diabetes", "blood sugar levels", "diabetes management"],
+    "responses": ["Symptoms of diabetes may include increased thirst, frequent urination, fatigue, blurred vision, slow wound healing, and unexplained weight loss. If you experience these symptoms, consult a healthcare provider for testing.", "To manage blood sugar levels, monitor your blood glucose regularly, take medications as prescribed, eat a balanced diet with controlled carbohydrate intake, engage in regular physical activity, maintain a healthy weight, and manage stress.", "Dietary changes for diabetes management include eating smaller, more frequent meals, choosing complex carbohydrates with a low glycemic index, limiting sugary foods and beverages, including fiber-rich foods, lean proteins, and healthy fats in meals, and spacing carbohydrate intake evenly throughout the day."]
+  },
+  {
+    "tag": "Asthma",
+    "patterns": ["asthma", "asthma attacks", "asthma management"],
+    "responses": ["Symptoms of asthma may include coughing, wheezing, shortness of breath, chest tightness, and difficulty breathing. It's important to seek medical attention if you experience these symptoms, especially if they interfere with daily activities or sleep.", "To prevent asthma attacks, avoid triggers such as allergens (pollen, dust mites, pet dander), tobacco smoke, air pollution, exercise-induced asthma triggers, and respiratory infections. Follow your asthma action plan and take prescribed medications regularly.", "Medications for asthma management may include quick-relief medications (such as short-acting beta-agonists) to relieve acute symptoms and long-term control medications (such as inhaled corticosteroids, leukotriene modifiers, and long-acting beta-agonists) to prevent symptoms and reduce inflammation."]
+  },
+  {
+    "tag": "Arthritis",
+    "patterns": ["arthritis", "arthritis pain", "exercises arthritis relief"],
+    "responses": ["Symptoms of arthritis may include joint pain, stiffness, swelling, redness, and decreased range of motion. There are different types of arthritis, including osteoarthritis, rheumatoid arthritis, and gout, each with its own specific symptoms and treatments.", "Arthritis pain, consider using over-the-counter or prescription medications (such as nonsteroidal anti-inflammatory drugs or analgesics), applying heat or cold therapy, using assistive devices, maintaining a healthy weight, and practicing joint protection techniques.", "Exercises for arthritis relief may include low-impact activities such as walking, swimming, cycling, tai chi, and yoga, as well as strength training exercises to improve muscle strength and joint stability. Consult a healthcare provider or physical therapist for personalized exercise recommendations."]
+  },
+
+  {
+    "tag": "Acid Reflux (GERD)",
+    "patterns": ["acid reflux", "acid reflux symptoms", "diet acid reflux"],
+    "responses": ["Symptoms of acid reflux may include heartburn, regurgitation of stomach contents, chest pain, difficulty swallowing, and chronic cough. If you experience these symptoms frequently, consult a healthcare provider for evaluation and treatment.", "To manage acid reflux symptoms, consider lifestyle modifications such as avoiding trigger foods (such as spicy, fatty, or acidic foods), eating smaller, more frequent meals, avoiding lying down after eating, and raising the head of your bed at night.", "Dietary changes for reducing acid reflux may include avoiding trigger foods, limiting caffeine and alcohol consumption, eating slowly and mindfully, maintaining a healthy weight, and consuming smaller portions to prevent overeating."]
+  },
+  {
+    "tag": "Urinary Tract Infection (UTI)",
+    "patterns": ["urinary tract infection", "treatment urinary tract infection", "UTI"],
+    "responses": ["Symptoms of a urinary tract infection may include frequent urination, burning or pain during urination, cloudy or foul-smelling urine, pelvic pain, and fever. If you suspect you have a UTI, it's important to see a healthcare provider for diagnosis and treatment.", "To treat a urinary tract infection at home, consider drinking plenty of water to flush out bacteria, using over-the-counter pain relievers (such as ibuprofen) to relieve discomfort, and applying heat to the abdomen or back to soothe pain.", "Preventive measures for UTIs may include staying hydrated, practicing good hygiene (such as wiping from front to back after using the bathroom), urinating after sexual intercourse, avoiding irritating feminine products, and wearing breathable cotton underwear."]
+  },
+
+  {
+    "tag": "Osteoporosis",
+    "patterns": ["osteoporosis", "bone change"],
+    "responses": ["Symptoms of osteoporosis may include back pain, loss of height over time, stooped posture, and fractures, particularly in the spine, hip, or wrist. If you're at risk or experiencing symptoms, consult a healthcare provider for evaluation and management.", "To prevent osteoporosis, consider getting enough calcium and vitamin D through diet or supplements, engaging in weight-bearing exercises such as walking, dancing, or weightlifting, avoiding smoking and excessive alcohol consumption, and getting regular bone density screenings.", "Exercises for osteoporosis can help strengthen bones and improve balance and posture. Consider weight-bearing exercises such as walking, jogging, hiking, stair climbing, or resistance training with weights or resistance bands. Consult a healthcare provider or physical therapist for personalized exercise recommendations."]
+  },
+  {
+    "tag": "Gastroesophageal Reflux Disease (GERD)",
+    "patterns": ["GERD","GERD symptoms", "Gastroesophageal", "Reflux Disease", "Reflux"],
+    "responses": ["Symptoms of GERD may include heartburn, regurgitation of stomach contents, chest pain, difficulty swallowing, and chronic cough. If you experience these symptoms regularly, consult a healthcare provider for evaluation and treatment.", "To manage GERD symptoms, consider lifestyle modifications such as avoiding trigger foods (such as spicy, fatty, or acidic foods), eating smaller, more frequent meals, avoiding lying down after eating, and raising the head of your bed at night.", "Dietary changes for GERD may include avoiding trigger foods, limiting caffeine and alcohol consumption, eating slowly and mindfully, maintaining a healthy weight, and consuming smaller portions to prevent overeating."]
+  },
+  {
+    "tag": "Irritable Bowel Syndrome (IBS)",
+    "patterns": ["IBs", "IBS symptoms", "bowel"],
+    "responses": ["Symptoms of IBS may include abdominal pain or discomfort, bloating, gas, diarrhea, constipation, or alternating bowel habits. If you experience these symptoms, consult a healthcare provider for diagnosis and management.", "To manage IBS symptoms, consider dietary modifications such as increasing fiber intake, avoiding trigger foods (such as dairy, gluten, or high-fat foods), eating smaller, more frequent meals, staying hydrated, and managing stress through relaxation techniques or therapy.", "Dietary changes for IBS may include following a low-FODMAP diet, which restricts certain carbohydrates that may trigger symptoms, keeping a food diary to identify trigger foods, and working with a registered dietitian for personalized nutrition advice."]
+  },
+  {
+    "tag": "Chronic Obstructive Pulmonary Disease (COPD)",
+    "patterns": ["COPD", "COPD symptoms", "Obstructive Pulmonary"],
+    "responses": ["Symptoms of COPD may include chronic cough, shortness of breath, wheezing, chest tightness, frequent respiratory infections, and fatigue. If you experience these symptoms, consult a healthcare provider for evaluation and treatment.", "To manage COPD symptoms, consider quitting smoking (if applicable), using prescribed medications (such as bronchodilators or corticosteroids) regularly, staying physically active within your limits, maintaining a healthy weight, and getting vaccinations for flu and pneumonia.", "Exercises for COPD can help improve lung function, endurance, and quality of life. Consider activities such as walking, biking, swimming, or tai chi, as well as breathing exercises and pulmonary rehabilitation programs tailored to individuals with COPD."]
+  },
+  {
+    "tag": "Hyperthyroidism",
+    "patterns": ["hyperthyroidism", "thyroid"],
+    "responses": ["Symptoms of hyperthyroidism may include rapid heartbeat, palpitations, tremors, weight loss, increased appetite, heat intolerance, sweating, fatigue, anxiety, and changes in menstrual patterns. If you experience these symptoms, consult a healthcare provider for evaluation and treatment.", "To manage hyperthyroidism, treatment options may include medications to block thyroid hormone production, radioactive iodine therapy to destroy thyroid cells, or surgery to remove part or all of the thyroid gland. Your healthcare provider will determine the most appropriate treatment based on your individual situation.", "Dietary changes for hyperthyroidism may include avoiding iodine-rich foods (such as seaweed, iodized salt, and seafood), limiting caffeine and alcohol intake, and eating a balanced diet with adequate nutrients to support overall health."]
+  },
+  {
+    "tag": "Chronic Kidney Disease (CKD)",
+    "patterns": ["chronic kidney disease", "ckd"],
+    "responses": ["Symptoms of chronic kidney disease may include fatigue, weakness, swelling in the legs or ankles, changes in urination frequency or color, nausea, vomiting, itching, and difficulty concentrating. If you experience these symptoms, consult a healthcare provider for evaluation and management.", "To manage chronic kidney disease, consider controlling blood pressure and blood sugar levels, quitting smoking (if applicable), maintaining a healthy weight, staying physically active within your limits, and avoiding over-the-counter medications that may harm the kidneys.", "Dietary changes for CKD may include reducing sodium intake to manage blood pressure, limiting phosphorus and potassium intake to prevent complications, and monitoring protein intake based on kidney function. Work with a registered dietitian for personalized nutrition advice."]
+  },
+  {
+    "tag": "Coronary Artery Disease (CAD)",
+    "patterns": ["coronary artery disease", "cad","Artery Disease", "Coronary"],
+    "responses": ["Symptoms of coronary artery disease may include chest pain or discomfort (angina), shortness of breath, fatigue, nausea, and dizziness. If you experience these symptoms, seek medical attention immediately, as CAD can lead to heart attack or stroke.", "To manage coronary artery disease, consider lifestyle modifications such as quitting smoking (if applicable), eating a heart-healthy diet low in saturated fat, cholesterol, and sodium, exercising regularly, managing stress, and taking prescribed medications to control cholesterol, blood pressure, and blood sugar levels.", "Lifestyle changes for CAD may also include participating in cardiac rehabilitation programs, which offer supervised exercise, education, and support to improve cardiovascular health and reduce the risk of future cardiac events."]
+  },
+  {
+    "tag": "Gout",
+    "patterns": ["gout", "joint pain", "movement"],
+    "responses": ["Symptoms of gout may include sudden, severe joint pain (usually in the big toe), swelling, redness, warmth, and limited range of motion in the affected joint. Gout attacks can be triggered by consuming purine-rich foods or alcohol.", "To manage gout symptoms, consider using medications such as nonsteroidal anti-inflammatory drugs (NSAIDs), colchicine, or corticosteroids to relieve pain and inflammation during acute attacks. Long-term management may involve medications to lower uric acid levels in the blood.", "Dietary changes for gout may include avoiding purine-rich foods (such as red meat, organ meats, shellfish, and certain types of fish), limiting alcohol consumption (especially beer and spirits), staying hydrated, and maintaining a healthy weight to reduce the risk of gout attacks."]
+  },
+  {
+    "tag": "Ovarian Cancer",
+    "patterns": ["ovarian cancer","ovary"],
+    "responses": ["Symptoms of ovarian cancer may include bloating, pelvic or abdominal pain, difficulty eating or feeling full quickly, urinary urgency or frequency, fatigue, indigestion, constipation, and changes in menstruation. If you experience these symptoms frequently, consult a healthcare provider for evaluation.", "Management of ovarian cancer depends on the stage and extent of the disease and may include surgery, chemotherapy, radiation therapy, targeted therapy, and immunotherapy. Your healthcare provider will develop a treatment plan tailored to your individual needs.", "Screening tests for ovarian cancer are not routinely recommended for women with average risk, as they may have limitations in detecting early-stage disease. However, if you have a family history of ovarian cancer or certain genetic mutations, discuss screening options with your healthcare provider."]
+  },
+  {
+    "tag": "Psoriasis",
+    "patterns": ["psoriasis", "skin cells"],
+    "responses": ["Symptoms of psoriasis may include red, raised patches of skin covered with silvery scales, itching or burning sensations, dry skin that may crack or bleed, and thickened, pitted, or ridged nails. Psoriasis can also affect joints, causing pain and swelling (psoriatic arthritis).", "To manage psoriasis symptoms, consider using topical treatments such as corticosteroids, vitamin D analogs, retinoids, coal tar, or salicylic acid to reduce inflammation, itching, and scaling. Phototherapy, oral medications, and biologic therapies may be prescribed for more severe cases."]
+  },
+  {
+    "tag": "Dry Cough",
+    "patterns": ["dry cough", "cough", "throat", "throat infection"],
+    "responses": ["To relieve a dry cough, consider using cough suppressants such as dextromethorphan, staying hydrated with warm fluids like herbal tea or honey-lemon water, using a humidifier to add moisture to the air, and avoiding irritants like smoke or pollution.", "Causes of a persistent dry cough may include allergies, asthma, gastroesophageal reflux disease (GERD), medications (such as ACE inhibitors), environmental irritants, or viral infections like the common cold or flu. If your cough persists or worsens, consult a healthcare provider for evaluation.", "Home remedies for a dry cough include honey or honey-based cough syrups, menthol cough drops, steam inhalation with eucalyptus oil, gargling with salt water, and drinking warm beverages like ginger tea. However, if your cough is severe or accompanied by other concerning symptoms, seek medical advice."]
+  },
+  {
+    "tag": "Wet Cough (Productive Cough)",
+    "patterns": ["wet cough", "mucus", "congestion"],
+    "responses": ["To help clear mucus and relieve a wet cough, consider using expectorants such as guaifenesin to loosen phlegm, staying hydrated with plenty of fluids, using a humidifier or steam inhalation to moisten the air, and practicing chest physiotherapy techniques like postural drainage and percussion.", "Causes of a productive cough with phlegm may include respiratory infections like bronchitis or pneumonia, allergies, asthma, chronic obstructive pulmonary disease (COPD), smoking, or environmental irritants. If your cough persists or worsens, consult a healthcare provider for evaluation.", "Expectorants for a wet cough may help thin and loosen mucus, making it easier to cough up. Common expectorants include guaifenesin (Mucinex) or bromhexine. However, use these medications as directed and consult a healthcare provider if you have other medical conditions or are taking other medications."]
+  },
+  {
+    "tag": "Nighttime Cough",
+    "patterns": ["night cough"],
+    "responses": ["To stop a cough at night, consider elevating your head with extra pillows or using a wedge pillow to prevent postnasal drip, using a humidifier or vaporizer to add moisture to the air, staying hydrated with warm fluids, and avoiding triggers like allergens or irritants.", "Reasons for coughing more at night may include postnasal drip from allergies or sinusitis, lying flat which allows mucus to accumulate in the throat, asthma, gastroesophageal reflux disease (GERD), or certain medications. If nighttime coughing persists, consult a healthcare provider for evaluation.", "Remedies for a nighttime cough include drinking warm herbal teas with honey, using throat lozenges or cough drops, taking over-the-counter antihistamines or decongestants for allergies, using nasal saline sprays to clear nasal passages, and avoiding caffeine or heavy meals before bedtime."]
+  },
+  {
+    "tag": "Chronic Cough",
+    "patterns": ["chronic cough"],
+    "responses": ["To manage a chronic cough, consider identifying and treating the underlying cause, such as asthma, allergies, postnasal drip, gastroesophageal reflux disease (GERD), chronic bronchitis, or medications. Your healthcare provider may recommend lifestyle changes, medications, or other interventions based on the cause.", "Possible causes of a persistent cough include smoking, environmental irritants, respiratory infections like bronchitis or pneumonia, asthma, allergies, postnasal drip, gastroesophageal reflux disease (GERD), or certain medications. If your cough persists for more than 8 weeks, consult a healthcare provider for evaluation."]
+  },
+  {
+    "tag": "Allergic Cough",
+    "patterns": ["allergic cough"],
+    "responses": ["To manage an allergic cough, consider identifying and avoiding triggers such as pollen, dust mites, pet dander, mold, or certain foods. Allergy medications like antihistamines, nasal corticosteroids, decongestants, or leukotriene modifiers may help reduce coughing and other allergy symptoms.", "Common triggers for an allergic cough include seasonal allergens like pollen or grass, indoor allergens like dust mites, pet dander, or mold, irritants like smoke or pollution, and certain foods or food additives. If you suspect allergies are causing your cough, consult a healthcare provider for evaluation and management."]
+  },
+
+  {
+    "tag": "Migraine",
+    "patterns": ["migraine", "headaches"],
+    "responses": ["Symptoms of a migraine may include severe headache, often on one side of the head, accompanied by nausea, vomiting, sensitivity to light and sound, and visual disturbances (aura). Migraines can be debilitating and impact daily activities.", "Management of migraine headaches often involves a combination of strategies, including over-the-counter or prescription medications (such as NSAIDs, triptans, or anti-nausea medications), rest in a quiet, dark room, hydration, and relaxation techniques."]
+  },
+  {
+    "tag": "Chronic Bronchitis",
+    "patterns": ["chronic bronchitis", "bronchitis"],
+    "responses": ["Symptoms of chronic bronchitis may include persistent cough with mucus production (lasting at least three months for two consecutive years), wheezing, chest tightness, shortness of breath, fatigue, and recurrent respiratory infections. If you experience these symptoms, consult a healthcare provider for evaluation.", "Management of chronic bronchitis often involves quitting smoking (if applicable), avoiding lung irritants (such as air pollution or chemicals), using bronchodilators or inhaled corticosteroids to relieve symptoms, and getting vaccinations for flu and pneumonia to prevent infections."]
+  },
+  {
+    "tag": "Otitis Media (Middle Ear Infection)",
+    "patterns": [
+      "otitis media", "ear pain","Ear Infection"],
+    "responses": ["Symptoms of otitis media may include ear pain, ear pressure, fluid drainage from the ear, hearing loss, fever, irritability (especially in infants and young children), and difficulty sleeping. If you or your child experience these symptoms, consult a healthcare provider for evaluation.", "Home treatments for otitis media may include applying a warm compress to the affected ear to relieve pain, using over-the-counter pain relievers (such as acetaminophen or ibuprofen), and avoiding inserting foreign objects into the ear canal.", "Ear drops for otitis media may be prescribed by a healthcare provider to help relieve pain, reduce inflammation, or treat bacterial infections. Common ear drops may contain antibiotics, steroids, or a combination of both. It's important to use ear drops as directed and consult a healthcare provider if symptoms worsen or persist."]
+  },
+  {
+    "tag": "Peptic Ulcer Disease",
+    "patterns": ["peptic ulcer disease", "peptic ulcer disease", "ulcer", "peptic ulcer"],
+    "responses": ["Symptoms of peptic ulcer disease may include burning stomach pain, bloating, belching, nausea, vomiting, dark or bloody stools, and unintentional weight loss. If you experience these symptoms, consult a healthcare provider for diagnosis and treatment.", "Management of peptic ulcer disease often involves taking medications to reduce stomach acid production (such as proton pump inhibitors, H2-receptor antagonists, or antacids), avoiding nonsteroidal anti-inflammatory drugs (NSAIDs), quitting smoking, and reducing alcohol consumption.", "Peptic ulcer disease patient may include avoiding spicy or acidic foods, limiting caffeine intake, eating smaller, more frequent meals, avoiding eating late at night, and consuming foods that promote healing of the stomach lining, such as fruits, vegetables, lean proteins, and whole grains."]
+  },
+  {
+    "tag": "Anxiety Disorders",
+    "patterns": ["anxiety disorder", "anxiety attack"],
+    "responses": ["Symptoms of anxiety disorders may include excessive worry or fear, restlessness, irritability, muscle tension, difficulty concentrating, insomnia, rapid heartbeat, shortness of breath, sweating, and gastrointestinal problems. If you experience these symptoms frequently and they interfere with daily life, consult a healthcare provider for evaluation and treatment.", "Management of anxiety symptoms often involves a combination of strategies, including psychotherapy (such as cognitive-behavioral therapy), medications (such as selective serotonin reuptake inhibitors or benzodiazepines), stress management techniques, and lifestyle modifications."]
+  },
+  {
+    "tag": "Gastroenteritis (Stomach Flu)",
+    "patterns": ["gastroenteritis","stomach pain", "stomach"],
+    "responses": ["Symptoms of gastroenteritis may include diarrhea, vomiting, abdominal cramps, nausea, fever, headache, muscle aches, or fatigue. If you experience these symptoms, it's important to stay hydrated and rest, and consult a healthcare provider if symptoms worsen or persist.", "Management of gastroenteritis symptoms often involves rest, staying hydrated with clear fluids (such as water, electrolyte solutions, or broths), avoiding solid foods until symptoms improve, and using over-the-counter medications to relieve fever, pain, or nausea."]
+  },
+  {
+    "tag": "Sinusitis",
+    "patterns": ["sinusitis", "nose", "nose infection", "nosse pain" ],
+    "responses": ["Symptoms of sinusitis may include facial pain or pressure, nasal congestion, thick nasal discharge, postnasal drip, cough, sore throat, fatigue, and headache. If you experience these symptoms, consult a healthcare provider for evaluation and management.", "Management of sinusitis symptoms often involves nasal irrigation with saline solution, using over-the-counter decongestants or antihistamines, applying warm compresses to the face, staying hydrated, and getting plenty of rest. In some cases, antibiotics or prescription medications may be necessary."]
+  },
+  {
+    "tag": "Eczema (Atopic Dermatitis)",
+    "patterns": ["eczema", "eczema flare ups", "inflamed skin", "dry skin" ],
+    "responses": ["Symptoms of eczema may include dry, itchy, red, and inflamed skin, rough patches, small bumps, or thickened skin. Eczema can also cause blisters that ooze and crust over, especially during flare-ups. Consult a dermatologist for proper diagnosis and management.", "Management of eczema flare-ups often involves using moisturizers regularly to keep the skin hydrated, avoiding irritants such as harsh soaps and detergents, taking short lukewarm showers, applying topical corticosteroids or calcineurin inhibitors to reduce inflammation, and identifying and avoiding triggers."]
+  },
+  {
+    "tag": "Meningitis",
+    "patterns": ["meningitis", "bacterial meningitis"],
+    "responses": ["Symptoms of meningitis may include sudden high fever, severe headache, stiff neck, sensitivity to light, nausea, vomiting, confusion, and difficulty concentrating. In babies, symptoms may also include irritability, poor feeding, and a bulging fontanelle (soft spot on the head). Seek immediate medical attention if you suspect meningitis.", "viral and bacterial meningitis often requires a lumbar puncture (spinal tap) to analyze cerebrospinal fluid. Bacterial meningitis is usually more severe and requires prompt antibiotic treatment, while viral meningitis is often less severe and may resolve on its own with supportive care."]
+  },
+  {
+    "tag": "Otitis Externa (Swimmer's Ear)",
+    "patterns": ["otitis externa", "Swimmer's Ear", "ear canal", "ear pain"],
+    "responses": ["otitis externa may include ear pain, itching, redness, swelling of the ear canal, drainage from the ear, and temporary hearing loss. Otitis externa is often caused by water trapped in the ear canal, allowing bacteria or fungi to grow. Consult a healthcare provider for proper diagnosis and treatment.", "otitis externa may include using over-the-counter pain relievers such as acetaminophen or ibuprofen, applying warm compresses to the affected ear, and avoiding swimming or getting water in the ear until symptoms improve. In some cases, prescription ear drops or antibiotics may be necessary.", "Ear drops for otitis externa may contain antibiotics to fight bacterial infections, corticosteroids to reduce inflammation, or antifungal medications to treat fungal infections. It's important to use ear drops as directed and consult a healthcare provider if symptoms worsen or persist."]
+  },
+
+  {
+    "tag": "Hypothyroidism",
+    "patterns": ["hypothyroidism"],
+    "responses": ["Symptoms of hypothyroidism may include fatigue, weight gain, cold intolerance, dry skin, hair loss, constipation, muscle weakness, depression, and memory problems. If you experience these symptoms, consult a healthcare provider for evaluation and management."]
+  },
+  {
+    "tag": "Anemia",
+    "patterns": ["anemia", "iron deficient", "chest pain"],
+    "responses": ["anemia may include fatigue, weakness, pale or yellowish skin, shortness of breath, dizziness or lightheadedness, cold hands and feet, chest pain, and irregular heartbeat. If you experience these symptoms, consult a healthcare provider for evaluation and management."]
+  },
+  {
+    "tag": "Urinary Stones (Kidney Stones)",
+    "patterns": ["urinary stones", "kidney stone"],
+    "responses": ["urinary stones may include severe pain in the back, side, abdomen, or groin, painful urination, blood in the urine, frequent urination, nausea, vomiting, and fever or chills. If you experience these symptoms, seek immediate medical attention.", "urinary stones often involves pain management with over-the-counter or prescription medications, increasing fluid intake to promote urine flow and prevent dehydration, and, in some cases, undergoing procedures such as lithotripsy or surgery to remove the stones."]
+  }
 ]}

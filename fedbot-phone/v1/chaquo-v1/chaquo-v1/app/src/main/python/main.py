@@ -92,21 +92,29 @@ def main():
         if path.exists(model_location):
             print("Agg Model Exists...\nLoading Model...")
             model = tensorF.keras.models.load_model(model_location,compile=False)
+            # print('here0')
         else:
             print("No agg model found!\nBuilding model...")
             model =Sequential()
             iShape = (len(x[0]),)
             oShape = len(y[0])
+            print(iShape,oShape)
+            # print(x[0])
+            # print(y[0])
             model.add(Dense(units=128, activation='relu',input_shape=iShape))
             model.add(Dropout(0.5))
             model.add(Dense(64,activation="relu"))
             model.add(Dropout(0.3))
             model.add(Dense(oShape,activation='softmax'))
+        # print('here_if')
         md = tensorF.keras.optimizers.Adam(learning_rate=0.01,decay=1e-6)
+        # print('here1')
         model.compile(loss='categorical_crossentropy',
                             optimizer=md,
                             metrics=['accuracy'])
+        # print('here2')
         model.fit(x,y,epochs=100,verbose=1)
+        # print('here3')
         print("Done Training")
         return model
 
@@ -128,11 +136,10 @@ def main():
       bagOfWords = wordBag(text,vocab,lm)
       ourResult = model.predict(np.array([bagOfWords]))[0]
       # print(ourResult)
-      newThresh=0.2
+      newThresh=0.0
       yp = [[i,res]for i,res in enumerate(ourResult) if res>newThresh]
       yp.sort(key=lambda x:x[1],reverse=True)
       newList=[]
-      # print(yp)
       for r in yp:
         newList.append(labels[r[0]])
       return newList
@@ -167,22 +174,23 @@ def main():
         print("Initializing Model...")
         while True:
             newMessage = input("You : ")
-            if(newMessage=="q"):
-                return "Model Trained"
+            if(newMessage=="Program interrupted by user"):
+                print('Model Retraining...')
+                break
             intents = PClass(newMessage,newWords,classes,model,lm)
             # print(intents)
             ourResult = getRes(intents,data)
             print("Chatbot : ",ourResult)
             response=input("Do you find the response relevant? Press [Y/N]")
-            if("y" in response or "Y" in response):
-              addPatterns(intents,newMessage)
+            # if("y" ==response or "Y" ==response):
+            #   addPatterns(intents,newMessage)
 
     def train_and_init():
-            x,y,newWords,classes,data,lm =  process_data()
-            model = build_model(x,y)
-            evaluate_model(model, x, y)
-            save_local_model_update(model)
-            initialize_model(model,newWords,classes,data,lm)
+        x,y,newWords,classes,data,lm =  process_data()
+        model = build_model(x,y)
+        evaluate_model(model, x, y)
+        save_local_model_update(model)
+        initialize_model(model,newWords,classes,data,lm)
 
     train_and_init()
 

@@ -52,6 +52,8 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 import java.util.Enumeration;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public abstract class ConsoleActivity extends AppCompatActivity
 implements ViewTreeObserver.OnGlobalLayoutListener, ViewTreeObserver.OnScrollChangedListener {
@@ -68,9 +70,11 @@ implements ViewTreeObserver.OnGlobalLayoutListener, ViewTreeObserver.OnScrollCha
 
     private Socket client;
     private PrintWriter printwriter;
-    private EditText textField;
-    private Button button;
-    private String message;
+
+    Python py = Python.getInstance();
+    Thread thread;
+    Runnable runnable;
+    ExecutorService executor;
     private EditText etInput;
     private ScrollView svOutput;
     private TextView tvOutput;
@@ -119,14 +123,20 @@ implements ViewTreeObserver.OnGlobalLayoutListener, ViewTreeObserver.OnScrollCha
 
     }
     public void trainModel(View view) {
-        Runnable runnable=new Runnable(){
+
+//        thread.setIsTerminating(true);
+        etInput.setText("Program interrupted by user");
+            // Trigger the "Done" action of the soft keyboard
+        etInput.onEditorAction(EditorInfo.IME_ACTION_DONE);
+
+        runnable=new Runnable(){
             public void run() {
-                Python py = Python.getInstance();
                 py.getModule("main").callAttr("main");
             }
         };
-        Thread thread=new Thread(runnable);
-        thread.start();
+        executor.submit(runnable);
+//        thread=new Thread(runnable);
+//        thread.start();
         toast("Re-training Model");
     }
 
@@ -339,6 +349,12 @@ implements ViewTreeObserver.OnGlobalLayoutListener, ViewTreeObserver.OnScrollCha
             uploadButton.startAnimation(animDisappear);
             trainButton.startAnimation(animDisappear);
             downloadButton.startAnimation(animDisappear);
+
+            sendSignalButton.setClickable(false);
+            uploadButton.setClickable(false);
+            trainButton.setClickable(false);
+            downloadButton.setClickable(false);
+
             sendSignalButton.setVisibility(View.INVISIBLE);
             uploadButton.setVisibility(View.INVISIBLE);
             trainButton.setVisibility(View.INVISIBLE);
@@ -349,6 +365,12 @@ implements ViewTreeObserver.OnGlobalLayoutListener, ViewTreeObserver.OnScrollCha
             uploadButton.setVisibility(View.VISIBLE);
             trainButton.setVisibility(View.VISIBLE);
             downloadButton.setVisibility(View.VISIBLE);
+
+            sendSignalButton.setClickable(true);
+            uploadButton.setClickable(true);
+            trainButton.setClickable(true);
+            downloadButton.setClickable(true);
+
             sendSignalButton.startAnimation(animAppear);
             uploadButton.startAnimation(animAppear);
             trainButton.startAnimation(animAppear);
@@ -391,6 +413,8 @@ implements ViewTreeObserver.OnGlobalLayoutListener, ViewTreeObserver.OnScrollCha
         downloadButton.setVisibility(View.INVISIBLE);
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+
+        executor = Executors.newSingleThreadExecutor();
     }
 
     protected abstract Class<? extends Task> getTaskClass();
